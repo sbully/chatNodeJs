@@ -1,0 +1,14 @@
+{
+  "name": "chatnodejs",
+  "version": "1.0.0",
+  "description": "First Real Time Chat on nodeJs",
+  "main": "mains.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SBully",
+  "license": "MIT",
+  "dependencies": {
+    "socket.io": "^2.3.0"
+  }
+}
