@@ -1,0 +1,37 @@
+const express = require('express');
+const app = express();
+const server = app.listen(8080);
+const path = require('path');
+const io = require("socket.io").listen(server)
+
+/* variable static pointant sur le dossier public, sert pour le link css */
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+app.get('/', function (requete, reponse) {
+
+	reponse.setHeader("Content-Type", "text/html");
+	reponse.status(200);
+	reponse.render('logpage.ejs');
+})
+app.get('/home', function (requete, reponse) {
+	reponse.redirect('/');
+})
+
+app.get('/chat', function (requete, reponse) {
+	reponse.setHeader("Content-Type", "text/html");
+	reponse.status(200);
+	reponse.render('chatpage.ejs');
+})
+
+app.use(function (requete, reponse) {
+	reponse.setHeader('Content-Type', 'text/plain');
+	reponse.status(404).send("Erreur 404 : Page introuvable");
+})
+
+io.sockets.on('connection', function (socket) {
+	console.log('un client est connecté');
+	socket.emit('login', 'Bienvenue, vous êtes connecté!')
+})
+
+/* app.listen(8080); */

@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+.field{
+    border: 3px solid;
+    border-radius: 8px;
+    width:70%;
+    min-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+}
+.field input[type='text'],fieldset input[type='password']{
+    width:100%;    
+    margin:0.5em 1em;
+}
+.field input[type="submit"]{
+    color:red;
+}
+.container{
+    margin-top: 0.5em;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.field label{
+    font-weight: bold;
+}

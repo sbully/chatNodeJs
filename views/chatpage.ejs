@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>tchat Login</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+
+<body>
+	<header>
+		<h1>Tchat en NodeJs</h1>
+	</header>
+
+	<section>
+		<article>
+			<fieldset class="field">
+				<legend>Envoi de Message</legend>
+
+				<form method="POST">
+					<div class="container">
+						<label for="Message">Message:</label>
+						<input type="text" class="input" name="Message" id="Message" placeholder="Tapez votre message">
+						<input type="submit" class="submit" value="Envoyer" disabled>
+					</div>
+				</form>
+			</fieldset>
+		</article>
+	</section>
+	<section id="chatsection">
+		<script src="/socket.io/socket.io.js"></script>
+
+		<script src="/js/chat.js"></script>
+
+	</section>
+
+	<footer>
+		<h3>&copy Seb</h3>
+	</footer>
+
+</body>
+
+</html>
