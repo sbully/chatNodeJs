@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>tchat Login</title>
+	<title>chat</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
@@ -12,33 +12,36 @@
 	<header>
 		<h1>Tchat en NodeJs</h1>
 	</header>
+	<div class="content">
+		<!-- 		<section>
+			<article>
 
-	<section>
-		<article>
-			<fieldset class="field">
-				<legend>Envoi de Message</legend>
+			</article>
+		</section> -->
 
-				<form method="POST">
-					<div class="container">
-						<label for="Message">Message:</label>
-						<input type="text" class="input Message" name="Message" id="Message"
-							placeholder="Tapez votre message">
-						<input type="submit" class="submit" value="Envoyer">
-					</div>
-				</form>
-			</fieldset>
-		</article>
-	</section>
+		<section id="chatsection">
 
-	<section id="chatsection">
+		</section>
+	</div>
 
-	</section>
-	<script src="/socket.io/socket.io.js"></script>
-	<script src="/js/chat.js"></script>
 	<footer>
+		<fieldset class="field">
+			<legend id="legend">Envoi de Message</legend>
+
+			<form method="POST">
+				<div class="container">
+					<label for="Message">Message:</label>
+					<input type="text" class="input Message" name="Message" id="Message"
+						placeholder="Tapez votre message">
+					<input type="submit" class="submit" value="Envoyer">
+				</div>
+			</form>
+		</fieldset>
+
 		<h3>&copy Seb</h3>
 	</footer>
-
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/js/chat.js"></script>
 </body>
 
 </html>

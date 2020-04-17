@@ -1,5 +1,16 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+header{
+    text-align: center;
 }
 
 .field{
@@ -10,23 +21,107 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    
+    font-size: 18px;
+}
+legend{
+    padding: 0 0.5em 0 0.5em;
+    margin-left: 2em;
 }
 .field input[type='text'],fieldset input[type='password']{
-    width:100%;    
+    flex-grow: 1;
     margin:0.5em 1em;
+    font-size: 18px;
 }
 .field input[type="submit"]{
     color:red;
+    font-size: 18px;
 }
 .container{
-    margin-top: 0.5em;
-    width: 100%;
+    margin: 0.5em;
     height: auto;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
 }
 .field label{
+    flex-grow: 0;
+}
+.field label{
     font-weight: bold;
+}
+.content{
+    flex: 1 0 auto;
+}
+#chatsection{
+    height: 650px;
+   overflow-y: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+footer {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    flex-shrink: 0;
+}
+footer h3{
+    align-self: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+}
+.user{
+    border-color: #ccc;
+    background-color: #ddd;
+    justify-content: flex-end;
+    border-radius: 25px;
+}
+
+
+.timeright {
+    align-self: flex-end;
+    color: #aaa;
+}
+  
+
+.timeleft{
+    color: #999;
+}
+
+.parag{
+    font-weight: bold;
+    font-size: 20px;
+    align-self: flex-start;
+    margin: 0 1em 0.5em 1em;
+}
+.userparag{
+    align-self: flex-end;
+    text-align: justify;
+}
+
+.divinside{
+    display: flex;
+    justify-self: center;
+}
+.image{
+    width: 70px;
+    min-width: 70px;
+    height: 70px;
+}
+.right{
+    align-self: end;
 }

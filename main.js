@@ -3,9 +3,11 @@ const app = express();
 const server = app.listen(8080);
 const path = require('path');
 const io = require("socket.io").listen(server)
+const session = require('express-session')
 
 /* variable static pointant sur le dossier public, sert pour le link css */
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({ secret: 'sessionsecret' }));
 
 
 app.get('/', function (requete, reponse) {
@@ -34,7 +36,7 @@ io.sockets.on('connection', function (socket) {
 	socket.broadcast.emit('message', "nouveau utilisateur connecté")
 	socket.emit('login', 'Bienvenue, vous êtes connecté!');
 	socket.on('message', function (message) {
-		console.log("message reçu :" + message)
+		socket.broadcast.emit('message', message);
 	});
 
 });
